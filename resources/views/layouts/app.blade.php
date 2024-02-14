@@ -43,11 +43,11 @@
                                 </li>
                             @endif
 
-                            @if (Route::has('register'))
+                            {{-- @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @endif
+                            @endif --}}
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -76,5 +76,15 @@
             @yield('content')
         </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        @if ($message = Session::get('wrong'))
+        Swal.fire({
+            title: 'App said:',
+            text: '{{ $message }}',
+            icon: 'error',
+        });
+        @endif
+    </script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - Berita</title>
+  <title>Dashboard - FindYou</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -39,7 +39,8 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="" class="logo d-flex align-items-center">
-        <span class="d-none d-lg-block">DASHBOARD BERITA</span>
+        <span class="d-none d-lg-block">FIND</span>
+        <img src="{{ asset('/image/profile/blue.png') }}" >
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Tittle -->
@@ -57,18 +58,19 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
               <h6>{{ Auth::user()->name }}</h6>
-              <span>{{ Auth::user()->level}}</span>
+              {{-- <span>{{ Auth::user()->level}}</span> --}}
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
-            <li>
+            {{-- <li>
               <a class="dropdown-item d-flex align-items-center" href="/{{ Auth::user()->level == 'admin' ? 'admin' : 'jurnalis' }}/profile">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
-            </li>
+            </li> --}}
+
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -84,8 +86,8 @@
                   {{ __('Logout') }}
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
+                  @csrf
+              </form>
             </li>
 
           </ul><!-- End Profile Dropdown Items -->
@@ -116,7 +118,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer mt-5 fixed-bottom bg-footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>Berita</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>FindYou</span></strong>. All Rights Reserved
     </div>
   </footer><!-- End Footer -->
 

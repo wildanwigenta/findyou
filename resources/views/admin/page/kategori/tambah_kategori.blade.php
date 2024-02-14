@@ -6,10 +6,10 @@
     <div class="col-lg-8 col-md-8 col-sm-12">
         <div class="card p-3">
             <h5 class="text-center mb-4">FORM TAMBAH KATEGORI</h5>
-            <form method="POST" action="/{{ Auth::user()->level == 'admin' ? 'admin' : 'jurnalis' }}/tambah_data_kategori" enctype="multipart/form-data">
+            <form method="POST" action="/admin/tambah_data_kategori" enctype="multipart/form-data">
                 @csrf
                 <div class="row mb-3">
-                    <label for="kategori" class="col-md-4 col-form-label text-md-end">{{ __('Kategori Berita') }}</label>
+                    <label for="kategori" class="col-md-4 col-form-label text-md-end">{{ __('Kategori') }}</label>
 
                     <div class="col-md-8">
                         <input id="kategori" type="text" class="form-control @error('kategori') is-invalid @enderror"

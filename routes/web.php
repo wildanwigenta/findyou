@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,20 +24,20 @@ use Illuminate\Support\Facades\Route;
     
     Auth::routes();
     
-    Route::prefix('admin')->group(function(){
+    Route::prefix('admin')->middleware('auth')->group(function(){
 
                                     // Dashboard 
-        Route::get('/admin',[App\Http\Controllers\DashboardController::class,'index']);
+        Route::get('/',[App\Http\Controllers\DashboardController::class,'index'])->middleware('auth');
                                     // Kelola Kategori
         Route::get('/kategori',[App\Http\Controllers\KategoriController::class,'index']);
         Route::get('/tambah_kategori',[App\Http\Controllers\KategoriController::class,'tambah_kategori']);
         Route::post('/tambah_data_kategori',[App\Http\Controllers\KategoriController::class,'tambah_data_kategori']);
         Route::delete('/hapus_kategori/{id_kategori}',[App\Http\Controllers\KategoriController::class,'hapus_kategori']);
                                     // Kelola Pertanyaan
-        Route::get('/kategori',[App\Http\Controllers\KategoriController::class,'index']);
-        Route::get('/tambah_kategori',[App\Http\Controllers\KategoriController::class,'tambah_kategori']);
-        Route::post('/tambah_data_kategori',[App\Http\Controllers\KategoriController::class,'tambah_data_kategori']);
-        Route::delete('/hapus_kategori/{id_kategori}',[App\Http\Controllers\KategoriController::class,'hapus_kategori']);
+        Route::get('/pertanyaan',[App\Http\Controllers\PertanyaanController::class,'index']);
+        Route::get('/tambah_pertanyaan',[App\Http\Controllers\PertanyaanController::class,'tambah_pertanyaan']);
+        Route::post('/tambah_data_pertanyaan',[App\Http\Controllers\PertanyaanController::class,'tambah_data_pertanyaan']);
+        Route::delete('/hapus_pertanyaan/{id_pertanyaan}',[App\Http\Controllers\PertanyaanController::class,'hapus_pertanyaan']);
     
     });
 
