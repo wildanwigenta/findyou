@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
     //  ----------------   FRONT PAGE   ------------------ //
 
     Route::get('/', function () {
-        return view('welcome');
+        return view('portal.question');
     });
     
                 //  ----------------   ADMIN PAGE   ------------------ //
