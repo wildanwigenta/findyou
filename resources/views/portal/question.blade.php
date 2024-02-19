@@ -5,7 +5,7 @@
         <div class="row align-items-center">
             <div class="col-lg-9 col-md-8 col-sm-12">
                 <h2 class="text-white">FindYou</h2>
-                <h5 class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ipsum.</h5>
+                <h5 class="text-white">Find your passion on FindYou.</h5>
             </div>
             <!-- <div class="col-lg-3 col-md-4 col-sm-12">
                 <a href="/login" class="btn custom-btn mt-3 mt-lg-4">Login untuk mencoba</a>
@@ -17,25 +17,31 @@
 <section class="section-padding">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-12 mt-3 mx-auto">
-                <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
-                    <div class="d-flex">
-                        <div class="custom-block-topics-listing-info d-flex">
-                            <div>
-                                <h5 class="mb-2">FindYou</h5>
-
-                                <p class="mb-0">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, minus?
-                                </p>
-                                <div class="text-center">
-                                    <button class="btn btn-danger btn-lg btn-rounded-4 mt-3 mt-lg-4">No</button>
-                                    <button class="btn btn-success btn-lg btn-rounded-4 mt-3 mt-lg-4">Yes</button>
+            <form action="/" method="post" id="minatBakatForm">
+                @csrf
+                <div id="questionsContainer">
+                    @foreach($pertanyaan as $pertanyaans)
+                    <div class="col-lg-8 col-12 mt-3 mx-auto">
+                        <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
+                            <div class="custom-block-topics-listing-info row">
+                                <div class="col-9">
+                                    <h5>{{ $pertanyaans->pertanyaan }}</h5>
+                                </div>
+                                <div class="col-3">
+                                    <input class="form-check-input mx-1" type="radio" name="answers[{{ $pertanyaans->id_pertanyaan }}]" value="ya"> Ya
+                                    <input class="form-check-input mx-1" type="radio" name="answers[{{ $pertanyaans->id_pertanyaan }}]" value="tidak">Tidak
                                 </div>
                             </div>
                         </div>
                     </div>
+                @endforeach
+                <div class="row">
+                    <div class="col-10 text-end">
+                        <button type="submit" class="btn custom-btn mt-3 mt-lg-4">Submit</button>
+                    </div>
                 </div>
-            </div>
+                
+            </form>
         </div>
     </div>
 </section>

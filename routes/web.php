@@ -16,9 +16,8 @@ use Illuminate\Support\Facades\Route;
 
     //  ----------------   FRONT PAGE   ------------------ //
 
-    Route::get('/', function () {
-        return view('portal.question');
-    });
+    Route::get('/', [App\Http\Controllers\PortalController::class, 'index'])->name('home');
+    Route::get('/hasil', [App\Http\Controllers\PortalController::class, 'hasil'])->name('hasil');
     
                 //  ----------------   ADMIN PAGE   ------------------ //
     
