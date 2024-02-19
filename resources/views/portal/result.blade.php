@@ -17,7 +17,7 @@
 <section class="section-padding">
     <div class="container">
         <div class="row">
-            <form action="/" method="post" id="minatBakatForm">
+            <form action="/" method="get" id="minatBakatForm">
                 @csrf
                 <div id="questionsContainer">
                     <div class="col-lg-8 col-12 mt-3 mx-auto">

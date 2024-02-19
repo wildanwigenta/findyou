@@ -17,7 +17,7 @@
 <section class="section-padding">
     <div class="container">
         <div class="row">
-            <form action="/" method="post" id="minatBakatForm">
+            <form action="/hasil" method="post" id="minatBakatForm">
                 @csrf
                 <div id="questionsContainer">
                     @foreach($pertanyaan as $pertanyaans)
