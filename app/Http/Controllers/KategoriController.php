@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class KategoriController extends Controller
 {
-
     public function index()
     {
         $data['kategori'] = Kategori::all();
@@ -18,7 +17,7 @@ class KategoriController extends Controller
     {
         return view('admin.page.kategori.tambah_kategori');
     }
-    public function tambah_data_kategori(Request $request )
+    public function tambah_data_kategori(Request $request)
     {
         $request->validate([
             'kategori' => 'required',
