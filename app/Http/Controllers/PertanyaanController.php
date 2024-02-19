@@ -42,12 +42,11 @@ class PertanyaanController extends Controller
         $data['pertanyaan'] = Pertanyaan::where('id_pertanyaan',$id_pertanyaan)->first();
         return view('admin.page.pertanyaan.ubah_pertanyaan',$data);
     }
-    public function ubah_data_berita(Request $request)
+    public function ubah_data_pertanyaan(Request $request)
     {
 
-        
         $request->validate([
-            'pertanyaan' => 'required',
+            'pertanyaan' => 'required'
         ]);
 
         Pertanyaan::where('id_pertanyaan',request()->id_pertanyaan)->update([
@@ -55,23 +54,15 @@ class PertanyaanController extends Controller
             'pertanyaan' => request()->pertanyaan,
         ]);
 
-            return redirect()->to('/admin/semua_berita')->with('update','update sucessfully');
+            return redirect()->to('/admin/pertanyaan')->with('update','update sucessfully');
     }
-    public function hapus_berita($id_berita)
+    public function hapus_pertanyaan($id_pertanyaan)
     {
-        $data = Berita::where('id_berita',$id_berita)->first();
-        $image_path = public_path('image/berita/'.$data->image);
-        if(file_exists($image_path)){
-            unlink($image_path);
-        }
+        $data = Pertanyaan::where('id_pertanyaan',$id_pertanyaan)->first();
         
-        Berita::where('id_berita',$id_berita)->delete();
+        Pertanyaan::where('id_pertanyaan',$id_pertanyaan)->delete();
 
-        if(Auth::user()->level == 'admin'){
-            return redirect()->to('/admin/semua_berita')->with('delete','delete sucessfully');
-        }
-        elseif(Auth::user()->level == 'jurnalis'){
-            return redirect()->to('/jurnalis/semua_berita')->with('delete','delete sucessfully');
-        }
+            return redirect()->to('/admin/pertanyaan')->with('delete','delete sucessfully');
+
     }
 }

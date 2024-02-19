@@ -6,7 +6,7 @@
         <div class="col-lg-8 col-md-8 col-sm-12">
             <div class="card p-3">
                 <h5 class="text-center mb-4">FORM UBAH PERTANYAAN</h5>
-                <form method="POST" action="/admin/update_data_pertanyaan" enctype="multipart/form-data">
+                <form method="POST" action="/admin/ubah_data_pertanyaan/{{ $pertanyaan->id_pertanyaan }}" enctype="multipart/form-data">
                     @csrf
                     <div class="row mb-3">
                         <label for="kategori" class="col-md-4 col-form-label text-md-end">{{ __('Kategori') }}</label>
@@ -14,7 +14,7 @@
                         <div class="col-md-8">
                             <select class="form-select" aria-label="Default select example" autofocus name="kategori"
                             id="kategori" required>
-                            <option value= "{{ $kat->id_kategori }}">  --  Select Kategori  --  </option>
+                            <option value= "{{ $pertanyaan->id_kategori }}">{{ $pertanyaan->kategori->kategori }}</option>
                             @foreach ($kategori as $kat)
                                 <option value="{{ $kat->id_kategori }}">{{ $kat->kategori }}</option>
                             @endforeach
@@ -32,7 +32,7 @@
 
                         <div class="col-md-8">
                             <input id="pertanyaan" type="text" class="form-control @error('pertanyaan') is-invalid @enderror"
-                                name="pertanyaan" value="" autocomplete="pertanyaan" autofocus required>
+                                name="pertanyaan" value="{{ $pertanyaan->pertanyaan }}" autocomplete="pertanyaan" autofocus required>
 
                             @error('pertanyaan')
                             <span class="invalid-feedback" role="alert">
