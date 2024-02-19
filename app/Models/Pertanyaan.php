@@ -13,7 +13,7 @@ class Pertanyaan extends Model
 
     public function kategori()
     { 
-        return $this->belongsTo(Kategori::class);
+        return $this->belongsTo(Kategori::class,'id_kategori','id_kategori');
     }
 
     use HasFactory;

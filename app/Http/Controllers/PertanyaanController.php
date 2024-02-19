@@ -12,7 +12,7 @@ class PertanyaanController extends Controller
 {
     public function index()
     {
-        $data['pertanyaan'] = Pertanyaan::all();
+        $data['pertanyaan'] = Pertanyaan::with('kategori')->get();
         return view('admin.page.pertanyaan.pertanyaan',$data);
     }
     public function tambah_pertanyaan()
