@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pertanyaan extends Model
 {
+    public $timestamps = false;
+    
     protected $guarded = ['id_pertanyaan'];
 
     public function kategori()
