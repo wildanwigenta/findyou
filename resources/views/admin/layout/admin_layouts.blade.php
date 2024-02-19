@@ -38,9 +38,9 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="" class="logo d-flex align-items-center">
+      <a href="#" class="logo d-flex align-items-center">
         <span class="d-none d-lg-block">FIND</span>
-        <img src="{{ asset('/image/profile/blue.png') }}" >
+        <img src="{{ asset('/image/profile/blue.png') }}" class="rounded-3 ms-1">
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Tittle -->
