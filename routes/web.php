@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
     Route::prefix('admin')->middleware('auth')->group(function(){
 
                                     // Dashboard 
-        Route::get('/',[App\Http\Controllers\DashboardController::class,'index'])->middleware('auth');
+        Route::get('/',[App\Http\Controllers\DashboardController::class,'index']);
                                     // Kelola Kategori
         Route::get('/kategori',[App\Http\Controllers\KategoriController::class,'index']);
         Route::get('/tambah_kategori',[App\Http\Controllers\KategoriController::class,'tambah_kategori']);
