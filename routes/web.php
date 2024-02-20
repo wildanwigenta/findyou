@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
     //  ----------------   FRONT PAGE   ------------------ //
 
     Route::get('/', [App\Http\Controllers\PortalController::class, 'index'])->name('home');
-    Route::post('/hasil', [App\Http\Controllers\PortalController::class, 'hasil'])->name('hasil');
+    Route::post('/hasil', [App\Http\Controllers\HasilController::class, 'index'])->name('hasil');
     
                 //  ----------------   ADMIN PAGE   ------------------ //
     

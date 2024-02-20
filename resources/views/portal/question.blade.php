@@ -20,16 +20,16 @@
             <form action="/hasil" method="post" id="minatBakatForm">
                 @csrf
                 <div id="questionsContainer">
-                    @foreach($pertanyaan as $pertanyaans)
+                    @foreach($pertanyaan as $p)
                     <div class="col-lg-8 col-12 mt-3 mx-auto">
                         <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
                             <div class="custom-block-topics-listing-info row">
                                 <div class="col-9">
-                                    <h5>{{ $pertanyaans->pertanyaan }}</h5>
+                                    <h5>{{ $p->pertanyaan }}</h5>
                                 </div>
                                 <div class="col-3">
-                                    <input class="form-check-input mx-1" type="radio" name="answers[{{ $pertanyaans->id_pertanyaan }}]" value="ya"> Ya
-                                    <input class="form-check-input mx-1" type="radio" name="answers[{{ $pertanyaans->id_pertanyaan }}]" value="tidak">Tidak
+                                    <input class="form-check-input mx-1" type="radio" name="jawaban[{{ $p->id_pertanyaan }}]" value="ya"> Ya
+                                    <input class="form-check-input mx-1" type="radio" name="jawaban[{{ $p->id_pertanyaan }}]" value="tidak">Tidak
                                 </div>
                             </div>
                         </div>
@@ -40,7 +40,6 @@
                         <button type="submit" class="btn custom-btn mt-3 mt-lg-4">Submit</button>
                     </div>
                 </div>
-                
             </form>
         </div>
     </div>

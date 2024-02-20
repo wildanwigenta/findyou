@@ -11,6 +11,8 @@ class Pertanyaan extends Model
     
     protected $guarded = ['id_pertanyaan'];
 
+    protected $primaryKey = 'id_kategori';
+
     public function kategori()
     { 
         return $this->belongsTo(Kategori::class,'id_kategori','id_kategori');

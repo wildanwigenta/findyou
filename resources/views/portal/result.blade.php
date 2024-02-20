@@ -26,10 +26,10 @@
                                 <h3>Hasil anda !</h3>
                                 <div class="d-flex">
                                     <p>Berdasarkan jawaban yang anda berikan, anda memiliki minat dibidang <span
-                                            class="p text-success fw-bold">Kesehatan</span> </p>
+                                            class="p text-success fw-bold">{{ $kategori->kategori }}</span> </p>
                                 </div>
 
-                                <p class="mb-1 fw-semibold">Presentase Jawaban Anda</p>
+                                {{-- <p class="mb-1 fw-semibold">Presentase Jawaban Anda</p>
                                 <div class="mb-1">
                                     <label for="">Kesehatan</label>
                                     <div class="progress" role="progressbar" aria-label="Example with label"
@@ -43,7 +43,7 @@
                                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
                                         <div class="progress-bar" style="width: 60%">60%</div>
                                     </div>
-                                </div>
+                                </div> --}}
 
                             </div>
                             <div class="row">

@@ -12,8 +12,7 @@ class PortalController extends Controller
     {
         $data['pertanyaan'] = Pertanyaan::all();
         return view('portal.question',$data);
+
     }
-    function hasil(){
-        return view('portal.result');
-    }
+
 }
