@@ -16,6 +16,16 @@
 
 <section class="section-padding">
     <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-lg-8 col-12 mb-3 mx-auto">
+                <div class="custom-block custom-block-topics-listing site-header shadow-lg">
+                    <div class="custom-block-topics-listing-info row text-center text-white mb-0">
+                        <h3 class="text-white">{{$name}}</h3>
+                        <h5 class="text-white">{{$school}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <form action="/hasil" method="post" id="minatBakatForm">
                 @csrf
@@ -37,7 +47,8 @@
                 @endforeach
                 <div class="row">
                     <div class="col-10 text-end">
-                        <button type="submit" class="btn custom-btn mt-3 mt-lg-4">Submit</button>
+                        <!-- <button type="submit" class="btn custom-btn mt-3 mt-lg-4">Submit</button> -->
+                        <a href="/result" class="btn custom-btn mt-3 mt-lg-4">Submit</a>
                     </div>
                 </div>
             </form>

@@ -8,7 +8,7 @@
     <meta name="author" content="" />
 
     <title>FindYou</title>
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
@@ -33,32 +33,32 @@ https://templatemo.com/tm-590-topic-listing
 
 <body class="topics-listing-page" id="top">
     <main>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg bg-white">
             <div class="container">
                 <a class="navbar-brand logo d-flex align-items-center" href="index.html">
                     <span class="d-none d-lg-block">FIND</span>
                     <img src="{{ asset('/image/profile/blue.png') }}" style="max-width: 100px;" class="rounded-3">
                 </a>
 
-                <div class="d-lg-none ms-auto me-4">
+                <!-- <div class="d-lg-none ms-auto me-4">
                     <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                </div>
+                </div> -->
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                    <!-- <ul class="navbar-nav ms-lg-5 me-lg-auto">
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#">Home</a>
                         </li>
-                    </ul>
+                    </ul> -->
 
-                    <div class="d-none d-lg-block">
+                    <!-- <div class="d-none d-lg-block">
                         <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </nav>
@@ -112,5 +112,9 @@ https://templatemo.com/tm-590-topic-listing
     <script src="{{ asset('/') }}assets/portal/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('/') }}assets/portal/js/jquery.sticky.js"></script>
     <script src="{{ asset('/') }}assets/portal/js/custom.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.js"
+			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			  crossorigin="anonymous"></script>
 </body>
 </html>

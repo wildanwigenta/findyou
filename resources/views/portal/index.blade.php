@@ -5,10 +5,10 @@
         <div class="row align-items-center">
             <div class="col-lg-9 col-md-8 col-sm-12">
                 <h2 class="text-white">FindYou</h2>
-                <h5 class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ipsum.</h5>
+                <h5 class="text-white">Find your passion on FindYou</h5>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-12">
-                <a href="/login" class="btn custom-btn mt-3 mt-lg-4">Login untuk mencoba</a>
+                <a href="#dataDiri" class="btn custom-btn mt-3 mt-lg-4">Coba Sekarang!</a>
             </div>
         </div>
     </div>
@@ -28,22 +28,22 @@
                                 <h5 class="mb-2">FindYou</h5>
 
                                 <p class="mb-0">
-                                    Adalah Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus.
+                                Findyou merupakan sebuah website yang memiliki fitur rekomendasi  yang akan membantu user untuk menemukan bidang sesuai passion berdasarkan hasil kuis yang mereka kerjakan. 
                                 </p>
 
-                                <a href="/login" class="btn custom-btn mt-3 mt-lg-4">Coba Sekarang</a>
+                                <a href="#dataDiri" class="btn custom-btn mt-3 mt-lg-4">Coba Sekarang</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 col-12 text-center">
+            <div class="col-lg-12 col-12 text-center" id="dataDiri">
                 <h3 class="mb-4">Isi Data Diri</h3>
                 <p>Lengkapi data diri sebelum mencoba.</p>
             </div>
             <div class="col-lg-8 col-12 mt-3 mx-auto">
                 <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
-                    <form>
+                    <form action="/question" method="get">
                         <div class="mb-3">
                             <label for="name" class="form-label form-custom">Name</label>
                             <input type="text" class="form-control" id="name" name="name" aria-describedby="name">
@@ -61,7 +61,7 @@
                             <input type="text" class="form-control" id="school" name="school" aria-describedby="school">
                         </div>
                         <div class="text-end">
-                          <a href="/login" type="submit" class="btn custom-btn mt-3 mt-lg-4">Submit</a>
+                          <button type="submit" class="btn custom-btn mt-3 mt-lg-4">Submit</button>
                         </div>
                     </form>
                 </div>

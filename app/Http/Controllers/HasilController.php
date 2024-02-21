@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class HasilController extends Controller
 {
-    public function index(Request $request)
+    public function addJawaban(Request $request)
     {
         
         $jawaban = $request->input('jawaban');
@@ -30,5 +30,8 @@ class HasilController extends Controller
         $kategori['kategori'] = Kategori::findOrFail($kategoriId);
 
         return view('portal.result', $kategori);
+    }
+    function index(){
+        return view('portal.result');
     }
 }

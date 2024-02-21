@@ -10,9 +10,14 @@ class PortalController extends Controller
 {
     function index()
     {
-        $data['pertanyaan'] = Pertanyaan::all();
-        return view('portal.question',$data);
-
+        return view('portal.index');
+        
     }
-
+    function question(Request $request){
+        $data['name'] = $request->input('name');
+        $data['degree'] = $request->input('degree');
+        $data['school'] = $request->input('school');
+        $data['pertanyaan'] = Pertanyaan::all();
+        return view('portal.question', $data);
+    }
 }

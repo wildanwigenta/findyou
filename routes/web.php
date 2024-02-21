@@ -17,8 +17,12 @@ use Illuminate\Support\Facades\Route;
     //  ----------------   FRONT PAGE   ------------------ //
 
     Route::get('/', [App\Http\Controllers\PortalController::class, 'index'])->name('home');
-    Route::post('/hasil', [App\Http\Controllers\HasilController::class, 'index'])->name('hasil');
+    Route::get('/question', [App\Http\Controllers\PortalController::class, 'question'])->name('question');
+    Route::get('/hasil', [App\Http\Controllers\HasilController::class, 'index'])->name('hasil');
+    Route::post('/addJawaban', [App\Http\Controllers\HasilController::class, 'addJawaban'])->name('addJawaban');
     
+    
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
                 //  ----------------   ADMIN PAGE   ------------------ //
     
     Auth::routes();
@@ -43,4 +47,3 @@ use Illuminate\Support\Facades\Route;
     });
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
