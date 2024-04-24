@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('/', [App\Http\Controllers\PortalController::class, 'index'])->name('home');
     Route::get('/question', [App\Http\Controllers\PortalController::class, 'question'])->name('question');
-    Route::get('/hasil', [App\Http\Controllers\HasilController::class, 'index'])->name('hasil');
+    Route::get('/result', [App\Http\Controllers\HasilController::class, 'index'])->name('hasil');
     Route::post('/addJawaban', [App\Http\Controllers\HasilController::class, 'addJawaban'])->name('addJawaban');
     
     

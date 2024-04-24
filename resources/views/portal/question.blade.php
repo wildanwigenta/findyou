@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="row">
-            <form action="/hasil" method="post" id="minatBakatForm">
+            <form action="/result" method="post" id="minatBakatForm">
                 @csrf
                 <div id="questionsContainer">
                     @foreach($pertanyaan as $p)
