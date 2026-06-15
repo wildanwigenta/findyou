@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('jawabans', function (Blueprint $table) {
             $table->id();
-            $table->foreign('id_pengguna')->references('id_pengguna')->on('penggunas');
+            
+            // Perbaikan di sini: Membuat kolom SEKALIGUS menjadikannya foreign key
+            $table->foreignId('id_pengguna')->constrained('penggunas', 'id_pengguna')->onDelete('cascade');
+            
             $table->string('j1');
             $table->string('j2');
             $table->string('j3');
